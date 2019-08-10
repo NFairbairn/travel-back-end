@@ -9,4 +9,9 @@ class ImagesController < ApplicationController
         image = Image.find(params[:id])
         render json: image
     end
+
+    def create
+        image = Image.create(collection: c1, uri: params[:uri], alt: params[:alt])
+        render json: image
+    end
 end
