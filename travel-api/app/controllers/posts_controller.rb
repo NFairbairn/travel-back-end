@@ -7,7 +7,21 @@ class PostsController < ApplicationController
 
     def create
         # byebug
+        # params[:images].each do |image|
+        #     puts image.uri
+        # end
+        # create a new post
         post = Post.create(title: params[:title], preview: params[:preview], content: params[:content], blog_id: params[:blog_id], location_id: params[:location_id])
-        render json: post
+        # create a new collection associated with that post
+        collection = Collection.create(post_id: post.id)
+
+        images = params[:images]
+        # iterate over each image ad create a new image instance associated with that collection
+        images.each do |image|
+            # i dont think this will work without the s3 bucket for a valid uri
+            # byebug
+            Image.create(collection: collection, alt: "", uri: image["uri"])
+        end
+        render json: post, include: :images
     end
 end
