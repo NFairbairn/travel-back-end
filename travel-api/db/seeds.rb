@@ -18,8 +18,8 @@ l1 = Location.create(name: "Seattle")
 l2 = Location.create(name: "London")
 l3 = Location.create(name: "Denver")
 
-p1 = Post.create(title: "post one", preview: "preview post one", content: "yeet brother", blog: b1, location: l1)
-p2 = Post.create(title: "post two", preview: "preview post two", content: "two", blog: b1, location: l1)
+p1 = Post.create(title: "Seattle", preview: "preview Seattle one", content: "yeet brother", blog: b1, location: l1)
+p2 = Post.create(title: "Seattle 2", preview: "preview Seattle two", content: "two", blog: b1, location: l1)
 p3 = Post.create(title: "post three", preview: "preview post three", content: "three", blog: b1, location: l2)
 p4 = Post.create(title: "post four", preview: "preview post four", content: "four", blog: b1, location: l2)
 p5 = Post.create(title: "post five", preview: "preview post five", content: "five", blog: b1, location: l3)
@@ -38,6 +38,18 @@ im3 = Image.create(collection: c3, uri: "https://cdn.londonandpartners.com/visit
 im4 = Image.create(collection: c4, uri: "https://www.visitbritain.com/sites/default/files/styles/wysiwyg_image/public/consumer/vb34156199_1100.jpg?itok=8azk9zgC", alt: "")
 im5 = Image.create(collection: c5, uri: "https://prod-marketing-greenhouse.global.ssl.fastly.net/blog-assets/denver.jpg?mtime=20180926010150", alt: "")
 im6 = Image.create(collection: c6, uri: "https://www.outsideonline.com/sites/default/files/styles/img_600x600/public/2018/08/14/denver-mountain-skyline_s.jpg?itok=S2B1cTop", alt: "")
+
+im7 = Image.create(collection: c1, uri: "https://www.citizenm.com/cache/images/seattle_city_image_1200x675-1_004b02a34b02a3.jpg")
+
+im8 = Image.create(collection: c2, uri: "https://media.timeout.com/images/105242139/image.jpg")
+
+im9 = Image.create(collection: c3, uri: "https://secure.i.telegraph.co.uk/multimedia/archive/02423/london_2423609b.jpg")
+
+im10 = Image.create(collection: c4, uri: "https://157894-455133-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/04/mavis-cw-195482-unsplash-400x225.jpg")
+
+im11 = Image.create(collection: c5, uri: "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_645,q_50,w_1024/v1/clients/denver/Denver_Skyline_Twilight_7d5b543c-c9c8-4714-acbc-6ce2c5d2e204.jpg")
+
+im12 = Image.create(collection: c6, uri: "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_645,q_50,w_1024/v1/clients/denver/Denver_Sunrise_II_good_thru_10_1_2018_978b1d85-6252-4a06-af5b-297c5ce9424e.jpg")
 
 
 pin1 = Pin.create(user: u1, post: p1)

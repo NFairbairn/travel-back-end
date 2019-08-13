@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
     def index 
-        posts = Post.all
+        posts = Post.all.order('created_at DESC')
         render json: posts, include: [:collection, :images]
     end
 
@@ -18,8 +18,6 @@ class PostsController < ApplicationController
         images = params[:images]
         # iterate over each image ad create a new image instance associated with that collection
         images.each do |image|
-            # i dont think this will work without the s3 bucket for a valid uri
-            # byebug
             Image.create(collection: collection, alt: "", uri: image["uri"])
         end
         render json: post, include: :images
