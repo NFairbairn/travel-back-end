@@ -22,4 +22,13 @@ class PostsController < ApplicationController
         end
         render json: post, include: :images
     end
+
+    def destroy
+        post = Post.find(params[:id])
+        posts = Post.all.order('created_at DESC')
+        
+        post.delete
+
+        render json: posts, include: [:collection, :images]
+    end
 end
