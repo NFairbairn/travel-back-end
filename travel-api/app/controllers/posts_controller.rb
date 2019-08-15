@@ -1,12 +1,12 @@
+
 class PostsController < ApplicationController
 
-    def index 
+    def index
         posts = Post.all.order('created_at DESC')
         render json: posts, include: [:collection, :images]
     end
 
     def create
-        # byebug
         # params[:images].each do |image|
         #     puts image.uri
         # end
