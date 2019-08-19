@@ -17,7 +17,7 @@ gem 'puma', '~> 3.11'
 # gem 'bcrypt', '~> 3.1.7'
 
 # AWS service gem
-# gem 'aws-sdk'
+gem 'aws-sdk'
 
 # dotenv
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
